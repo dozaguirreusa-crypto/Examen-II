@@ -1,13 +1,12 @@
 {
-  "name": "examen-2",
+  "name": "validando-deploy-vercel",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Pagina simple para validar deploy en Vercel",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo \"Build estatico listo\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "ISC"
 }
