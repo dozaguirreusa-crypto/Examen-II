@@ -1,0 +1,41 @@
+# ============================================================
+# Snippet2 --- Danado
+# ============================================================
+
+deploy:
+    runs-on: ubuntu-latest
+
+    environment: production
+
+steps:
+    - uses: actions/checkout@v4
+    - name: Deploy to Vercel
+
+    run: vercel --prod --token $VERCEL_TOKEN
+    env:
+        VERCEL_TOKEN: secrets.
+
+
+
+# ============================================================
+# Snippet2 --- CORREGIDO
+# ============================================================
+
+
+
+deploy:
+  runs-on: ubuntu-latest
+
+  environment:
+    name: production
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Deploy to Vercel
+      env:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      run: |
+        npm install -g vercel
+        vercel deploy --prod --token $VERCEL_TOKEN

@@ -1,0 +1,42 @@
+# ============================================================
+# Snippet3 --- Danado
+# ============================================================
+
+test:
+runs-on: ubuntu-latest
+strategy:
+matrix:
+node-version: 18
+steps:
+- uses: actions/checkout@v4
+- uses: actions/setup-node@v4
+with:
+node-version: ${{ matrix.node-version }}
+cache: npm
+- run: npm ci && npm test
+
+
+# ============================================================
+# Snippet3 --- CORREGIDO
+# ============================================================
+
+test:
+  runs-on: ubuntu-latest
+
+  strategy:
+    matrix:
+      node-version: [18.x]
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: npm
+
+    - name: Install dependencies and run tests
+      run: npm ci && npm test
+

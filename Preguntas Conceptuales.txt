@@ -1,0 +1,26 @@
+*********************************
+        Preguntas
+*********************************        
+
+1. ¿Cual es la diferencia fundamental entre Integracion Continua (CI) y Entrega Continua
+(CD)?
+R/ La diferencia fundamental es que la Integración Continua (CI) se enfoca en automatizar 
+la integración, compilación y pruebas del código en el repositorio, mientras que la 
+Entrega Continua (CD) automatiza el paso siguiente, preparando ese código verificado para ser 
+lanzado a producción en cualquier momento, a menudo mediante una aprobación manual.
+
+2. ¿Que es un GitHub self-hosted runner y cuando seria necesario usarlo?
+R/ Es una máquina (física, virtual, en contenedor o nube) gestionada por 
+ti mismo, en lugar de por GitHub, para ejecutar trabajos de CI/CD 
+(integración y despliegue continuos) de tus acciones de GitHub Actions
+
+3. ¿Cual es el proposito de los GitHub environments? ¿Como se usan en workflows?
+R/ Los GitHub Environments (Entornos) permiten gestionar configuraciones, secretos 
+y reglas de aprobación específicas para diferentes etapas de despliegue (ej. staging, 
+production) en Actions. Su propósito es proteger entornos críticos, restringir ramas, 
+auditar despliegues y separar credenciales de forma segura.
+
+4. ¿Que es una rollback strategy y como se implementaria en un pipeline de CD?
+R/  Es un plan automatizado o manual para restaurar un sistema a su última versión 
+estable tras un despliegue fallido, garantizando la disponibilidad y minimizando el 
+tiempo de inactividad.
